@@ -5,7 +5,7 @@ let connections = {}
 let messages = {}
 let timeOnline = {}
 
-export  const connectToSocket = (server) => {
+export const connectToSocket = (server) => {
     const io = new Server(server, {
         cors: {
             origin: "*",
@@ -18,7 +18,7 @@ export  const connectToSocket = (server) => {
 
     io.on("connection", (socket) => {
 
-        console.log("SOMETHING CONNECTED")
+        console.log("SOMETHING CONNECTED");
 
         socket.on("join-call", (path) => {
 
